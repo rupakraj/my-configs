@@ -1,0 +1,90 @@
+" Enable pathogen theme
+execute pathogen#infect()
+
+" Basic Configurations
+set backspace=2         " backspace in insert mode works like normal editor
+"syntax on               " syntax highlighting
+filetype indent on      " activates indenting for files
+set autoindent          " auto indenting
+set number              " line numbers
+colorscheme desert      " colorscheme desert
+set nobackup            " get rid of anoying ~file
+
+" keep cursor in the middle of the screen while scrolling up and down.
+set scrolloff=999
+
+" show auto complete menus.
+set wildmenu
+
+" Make wildmenu behave like bash completion. Finding commands are so easy now.
+set wildmode=list:longest
+
+" run the Bash script by pressing F4 without leaving VIM.
+map <f4> :w <CR>:!bash % <CR>
+
+"Always show current position
+set ruler
+
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+" solarized theme
+syntax enable
+set background=dark
+colorscheme solarized
+
+
+" powerline
+set laststatus=2
+set encoding=utf-8
+set showtabline=2
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
