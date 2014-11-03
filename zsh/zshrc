@@ -86,3 +86,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 #POWERLINE_HIDE_USER_NAME="true"
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
